@@ -4,7 +4,7 @@
  * 
  */
 import java.util.Scanner; //or import java.util.*;
-public class Main { //Your class has to be called MAIN
+public class Main { //Your class has to be called Main
 
 	public static void main(String[] args) { //This line makes it a main method.
 		// First step? Make a Scanner. Copy this line EXACTLY
@@ -31,7 +31,33 @@ public class Main { //Your class has to be called MAIN
 			System.out.println("Loop #"+x);
 		}
 		
+		//Compare items!
+		/*
+		 * To compare numbers, use == for equals, <, <=, >, >=, !=
+		 * For strings, use .equals(), or .equalsIgnoreCase().
+		 */
+		if(intInput>20) {
+			System.out.println("You entered a big number");
+		}else if(intInput<20) {
+			System.out.println("You entered a smaller number");
+		}else {
+			System.out.println("You entered 20");
+		}
 		
+		if (strInput.equals("Mr. Zebarth")) {
+			System.out.println("STOP STEALING MY IDENTITY");
+		}else if (strInput.equalsIgnoreCase("Mr. Zebarth")) {
+			System.out.println("Nice try hacker!");
+		}else{
+			System.out.println("Hello "+strInput);
+		}
+		
+		if (strInput.contains("+")) {
+			System.out.println(dblInput+" + "+intInput+" = "+add(dblInput,intInput));
+		}
 	}
 
+	static double add(double num1, int num2) {
+		return num1+num2;
+	}
 }
